@@ -10,24 +10,24 @@
 This project uses the `OIDv4_ToolKit` to download and visualize single or multiple classes from the Open Images v4 dataset. You can find more details about the toolkit and its usage in its [GitHub repository](https://github.com/EscVM/OIDv4_ToolKit).
 
 ---
-- After downloading the `OIDv4_ToolKit`, navigate to the directory on your PC. For example:
+After downloading the `OIDv4_ToolKit`, navigate to the directory on your PC. For example:
 
-  ```cd C:\Users\(User Name)\ ... \OIDv4_ToolKit``` 
+```bash
+cd C:\Users\(User Name)\ ... \OIDv4_ToolKit
+``` 
 
----
+Install the necessary Python libraries from the `requirements.txt` file by running:
 
-- Install the necessary Python libraries from the `requirements.txt` file by running:
-
-  ```pip install -r requirements.txt```
-
----
+  ```bash 
+  pip install -r requirements.txt
+  ```
 
 ## Step 3: Install Custom Classes and Define Constraints
 
-- Let's assume you want to download three specific classes:
-  1. Car
-  2. Airplane
-  3. Traffic light
+Let's assume you want to download three specific classes:
+1. Car
+2. Airplane
+3. Traffic light
 
 To download these classes, run the following command inside the terminal:
 
@@ -66,27 +66,30 @@ To download these classes, run the following command inside the terminal:
 
 #### Example of the contents of the `classes.txt` file:
 
-<div style="border: 5px solid white; padding: 20px; width: 150px; margin: 0 auto; text-align: left; background-color: black; font-size: 18px; color: white;">
-Car<br>
-Airplane<br>
-Traffic light<br>
-...<br>
-...<br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div>
+        <pre>
+Car
+Airplane
+Traffic light
 ...
-</div>
+...
+...
+        </pre>
+    </div>
+</body>
+</html>
 
-
-
-
-
----
 
 ## Step 5: Verify `.txt` Files
 
 - Open each `.txt` file inside the `Label` folder and check if the first word in the `.txt` file corresponds to `Car` (for the Car folder) or `Airplane` (for the Airplane folder), as shown in the example below.
-
----
-
 
 ### Folder OID currently looks like:
 <!DOCTYPE html>
@@ -94,36 +97,10 @@ Traffic light<br>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .box-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px 0;
-        }
-        .box {
-            border: 2px solid white;
-            padding: px;
-            background-color: #000;
-            color: #fff;
-            font-size: 14px;
-            white-space: pre;
-            width: 650px;
-            text-align: left;
-            box-sizing: border-box;
-            font-family: monospace;
-        }
-        .box .inner {
-            border-top: 2px solid white;
-            border-bottom: 2px solid white;
-            padding: 10px;
-        }
-    </style>
 </head>
 <body>
-    <div class="box-container">
-        <div class="box">
-            <pre>
+    <div>
+        <pre>
 OID
 ├── csv_folder
 │   ├── class-descriptions-boxable.csv
@@ -146,8 +123,7 @@ OID
 │       │   ├── 00a587aee58e37fe.jpg
 │       │   ├── 00bb028447c9c791.jpg
 │       │   └── ...
-            </pre>
-        </div>
+        </pre>
     </div>
 </body>
 </html>
@@ -166,18 +142,15 @@ OID
 - **Compress** the `OID` folder into a .zip file using compression level 0. This precaution helps prevent the need for re-downloading images and labels in the event that the label conversion process encounters issues in the subsequent steps.
 
 
-
-
-
 ## Step 7: Convert Classes to `yolo` Format
 
-- Run the following command to convert annotations to the .yolo format:
+Run the following command to convert annotations to the .yolo format:
 
-    ```bash
-    python convert_annotations.py
-    ```
+```bash
+python convert_annotations.py
+```
 
-- **Current structure of the OID folder:**
+### Current structure of the OID folder:
 
 <!DOCTYPE html>
 <html lang="en">
@@ -217,10 +190,6 @@ OID
 </body>
 </html>
 
-
-
-
-
 ### Example of .txt file contents
 ```markdown
 | ID  | X      | Y          | Width | Height              |
@@ -229,18 +198,16 @@ OID
 | 1   | 100.24 | 50.692829  | 200.6 | 150.56632700000003  |
 ```
 
-
 - Verify for each class whether the "converted .txt files" start with numbers instead of class names.
 
 - If the order in `classes.txt` specifies Car, Airplane, then when converting the `.txt` files, the class name "Car" should be replaced with the number "0", and "Airplane" should be replaced with the number "1".
 
 
-### Step 8: Remove `Label` Folder
+## Step 8: Remove `Label` Folder
 
 - Delete the "Label" folder within each class directory.
 
 - The structure of OID after deletion is as follows:
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -249,9 +216,8 @@ OID
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div style="display: flex; justify-content: center; align-items: center; margin: 20px 0;">
-        <div style="border: 2px solid white; padding: 10px; background-color: #000; color: #fff; font-size: 14px; white-space: pre; width: 650px; text-align: left; box-sizing: border-box; font-family: monospace;">
-            <pre>
+    <div>
+        <pre>
 OID
 ├── csv_folder
 │   ├── class-descriptions-boxable.csv
@@ -277,7 +243,8 @@ OID
 </html>
 
 
-### Step 9: (Suggestion) Adding Prefix to Image/Text File Names
+
+## Step 9: (Suggestion) Adding Prefix to Image/Text File Names
 
 1. Open `Windows PowerShell` and navigate to the directory containing the images and text files to which you wish to add a prefix.
 
@@ -301,9 +268,8 @@ OID
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div style="display: flex; flex-direction: column; align-items: center; margin: 20px 0;">
-        <div style="border: 2px solid white; padding: 10px; background-color: #000; color: #fff; font-size: 14px; white-space: pre; width: 650px; text-align: left; box-sizing: border-box; font-family: monospace;">
-            <pre>
+    <div>
+        <pre>
 OID
 ├── csv_folder
 │   ├── class-descriptions-boxable.csv
@@ -328,15 +294,7 @@ OID
 </body>
 </html>
 
-
-
-
-
-
-
-
-
-### Step 10: Proper Distribution for YOLO Training
+## Step 10: Proper Distribution for YOLO Training
 
 ***Note:*** Pay attention to the capitalization of folder names. Use an approximate ratio of 70:30 for training and validation data.
 
@@ -367,9 +325,6 @@ OID
 
 ### Final Structure of the "Dataset" Folder:
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -377,9 +332,8 @@ OID
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div style="display: flex; flex-direction: column; align-items: center; margin: 20px 0;">
-        <div style="border: 2px solid white; padding: 10px; background-color: #000; color: #fff; font-size: 14px; white-space: pre; width: 650px; text-align: left; box-sizing: border-box; font-family: monospace;">
-            <pre>
+    <div>
+        <pre>
 Dataset
 ├── train
 │   ├── images
@@ -412,4 +366,3 @@ Dataset
     </div>
 </body>
 </html>
-

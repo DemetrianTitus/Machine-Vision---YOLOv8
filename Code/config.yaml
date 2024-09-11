@@ -1,0 +1,27 @@
+path: C:\Users\(User_name)\...\Dataset  # dataset root dir
+train: train  # train images (relative to 'path')
+val: val  # val images (relative to 'path')
+
+# Classes
+names:
+
+# Urban enviroment classes
+  0: Car
+  1: Truck
+  2: Train
+  3: Motorcycle
+  4: Bicycle
+  5: Traffic light
+  6: Traffic sign
+  7: Person
+  8: Street light
+  9: Van
+
+# Indoor enviroment classes
+  # 0: Ball
+  # 1: Headphones
+  # 2: Book
+  # 3: Bottle
+  # 4: Doll
+  # 5: Mug
+  # 6: Teddy bear

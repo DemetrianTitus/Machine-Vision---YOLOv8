@@ -154,48 +154,12 @@ OID
 
 ### Example of .txt file contents
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .box-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px 0;
-        }
-        .box {
-            border: 2px solid white;
-            padding: 10px;
-            background-color: #000;
-            color: #fff;
-            font-size: 14px;
-            white-space: pre;
-            width: 650px;
-            text-align: left;
-            box-sizing: border-box;
-            font-family: monospace;
-            margin-bottom: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="box-container">
-        <div class="box">
-            Car 522.24 185.692829 601.6 253.56632700000003
-            ...                                            
-        </div>
-        <div class="box">
-            Airplane 100.24 50.692829 200.6 150.56632700000003 
-            ...                                                
-        </div>
-    </div>
-</body>
-</html>
-
-
+```markdown
+| Object    | X      | Y          | Width | Height             |
+|-----------|--------|------------|-------|--------------------|
+| Car       | 522.24 | 185.692829 | 601.6 | 253.56632700000003 |
+| Airplane  | 100.24 | 50.692829  | 200.6 | 150.56632700000003 |
+```
 
 ## Step 6: (Optional) Safety Measure
 
@@ -220,31 +184,6 @@ OID
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .box-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px 0;
-        }
-        .box {
-            border: 2px solid white;
-            padding: 10px;
-            background-color: #000;
-            color: #fff;
-            font-size: 14px;
-            white-space: pre;
-            width: 800px;
-            text-align: left;
-            box-sizing: border-box;
-            font-family: monospace;
-        }
-        .box .inner {
-            border-top: 2px solid white;
-            border-bottom: 2px solid white;
-            padding: 10px;
-        }
-    </style>
 </head>
 <body>
     <div class="box-container">
@@ -278,48 +217,17 @@ OID
 </body>
 </html>
 
-### Example of .txt file contents
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .box-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px 0;
-        }
-        .box {
-            border: 2px solid white;
-            padding: 10px;
-            background-color: #000;
-            color: #fff;
-            font-size: 14px;
-            white-space: pre;
-            width: 650px;
-            text-align: left;
-            box-sizing: border-box;
-            font-family: monospace;
-            margin-bottom: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="box-container">
-        <div class="box">
-            0 522.24 185.692829 601.6 253.56632700000003
-            ...                                            
-        </div>
-        <div class="box">
-            1 100.24 50.692829 200.6 150.56632700000003 
-            ...                                                
-        </div>
-    </div>
-</body>
-</html>
+
+
+
+### Example of .txt file contents
+```markdown
+| ID  | X      | Y          | Width | Height              |
+|-----|--------|------------|-------|---------------------|
+| 0   | 522.24 | 185.692829 | 601.6 | 253.56632700000003  |
+| 1   | 100.24 | 50.692829  | 200.6 | 150.56632700000003  |
+```
 
 
 - Verify for each class whether the "converted .txt files" start with numbers instead of class names.
@@ -339,30 +247,10 @@ OID
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .box-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px 0;
-        }
-        .box {
-            border: 2px solid white;
-            padding: 10px;
-            background-color: #000;
-            color: #fff;
-            font-size: 14px;
-            white-space: pre;
-            width: 650px;
-            text-align: left;
-            box-sizing: border-box;
-            font-family: monospace;
-        }
-    </style>
 </head>
 <body>
-    <div class="box-container">
-        <div class="box">
+    <div style="display: flex; justify-content: center; align-items: center; margin: 20px 0;">
+        <div style="border: 2px solid white; padding: 10px; background-color: #000; color: #fff; font-size: 14px; white-space: pre; width: 650px; text-align: left; box-sizing: border-box; font-family: monospace;">
             <pre>
 OID
 ├── csv_folder
@@ -389,9 +277,6 @@ OID
 </html>
 
 
-
-
-
 ### Step 9: (Suggestion) Adding Prefix to Image/Text File Names
 
 1. Open `Windows PowerShell` and navigate to the directory containing the images and text files to which you wish to add a prefix.
@@ -414,30 +299,10 @@ OID
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .box-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px 0;
-        }
-        .box {
-            border: 2px solid white;
-            padding: 10px;
-            background-color: #000;
-            color: #fff;
-            font-size: 14px;
-            white-space: pre;
-            width: 650px;
-            text-align: left;
-            box-sizing: border-box;
-            font-family: monospace;
-        }
-    </style>
 </head>
 <body>
-    <div class="box-container">
-        <div class="box">
+    <div style="display: flex; flex-direction: column; align-items: center; margin: 20px 0;">
+        <div style="border: 2px solid white; padding: 10px; background-color: #000; color: #fff; font-size: 14px; white-space: pre; width: 650px; text-align: left; box-sizing: border-box; font-family: monospace;">
             <pre>
 OID
 ├── csv_folder
@@ -462,6 +327,7 @@ OID
     </div>
 </body>
 </html>
+
 
 
 
@@ -509,30 +375,10 @@ OID
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .box-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px 0;
-        }
-        .box {
-            border: 2px solid white;
-            padding: 10px;
-            background-color: #000;
-            color: #fff;
-            font-size: 14px;
-            white-space: pre;
-            width: 650px;
-            text-align: left;
-            box-sizing: border-box;
-            font-family: monospace;
-        }
-    </style>
 </head>
 <body>
-    <div class="box-container">
-        <div class="box">
+    <div style="display: flex; flex-direction: column; align-items: center; margin: 20px 0;">
+        <div style="border: 2px solid white; padding: 10px; background-color: #000; color: #fff; font-size: 14px; white-space: pre; width: 650px; text-align: left; box-sizing: border-box; font-family: monospace;">
             <pre>
 Dataset
 ├── train

@@ -1,7 +1,8 @@
 # Instructions on data preparation
 ## Step 1: Prerequisite
 
-- Python must be installed on your PC.
+Ensure you have the following installed:
+- **Python 3.9.13**: [Download Python](https://www.python.org/downloads/)
 
 ***Note:*** It is possible to use Python and create a virtual environment in VS Code to download images and labels directly within VS Code.
 
@@ -31,7 +32,9 @@ Let's assume you want to download three specific classes:
 
 To download these classes, run the following command inside the terminal:
 
-```python main.py downloader --classes Car Airplane Traffic_light --type_csv train --limit 2000```
+```bash
+python main.py downloader --classes Car Airplane Traffic_light --type_csv train --limit 2000
+```
 
 - In the example above, the command will download a maximum of `2000` images for each of the three classes.
 
@@ -42,7 +45,9 @@ To download these classes, run the following command inside the terminal:
 ### Example with Additional Constraints
 - Here is another example using different constraints:
 
-    ```python main.py downloader --classes Car Bus Traffic_light Traffic_sign Street_light Person --type_csv train --sub h --image_IsOccluded 0 --image_IsTruncated 0 --image_IsGroupOf 0 --image_IsDepiction 0 --image_IsInside 0 --n_threads 20 --limit 8000```
+```bash
+python main.py downloader --classes Car Bus Traffic_light Traffic_sign Street_light Person --type_csv train --sub h --image_IsOccluded 0 --image_IsTruncated 0 --image_IsGroupOf 0 --image_IsDepiction 0 --image_IsInside 0 --n_threads 20 --limit 8000
+```
 
 ***Note:*** For classes with multiple words like `Traffic light`, use an underscore to connect them in the command, e.g., `Traffic_light`.
 
@@ -55,10 +60,10 @@ To download these classes, run the following command inside the terminal:
 
 ## Step 4: Adding Classes
 
-- To specify the classes you want to download, follow these steps:
+To specify the classes you want to download, follow these steps:
 
-  1. Open the `classes` folder inside the `OIDv4_ToolKit` directory.
-  2. Enter the desired classes, with each class on a separate line.
+1. Open the `classes` folder inside the `OIDv4_ToolKit` directory.
+2. Enter the desired classes, with each class on a separate line.
 
 ***Note:*** For classes with multiple words, such as `Traffic light`, write them with a space, like `Traffic light`.
 
@@ -144,7 +149,7 @@ OID
 
 ## Step 7: Convert Classes to `yolo` Format
 
-Run the following command to convert annotations to the .yolo format:
+Run the following command to `convert annotations` to the `yolo` format:
 
 ```bash
 python convert_annotations.py
@@ -205,9 +210,10 @@ OID
 
 ## Step 8: Remove `Label` Folder
 
-- Delete the "Label" folder within each class directory.
+- Delete the `Label` folder within each class directory.
 
-- The structure of OID after deletion is as follows:
+
+### The structure of OID after deletion is as follows:
 
 <!DOCTYPE html>
 <html lang="en">
@@ -259,7 +265,7 @@ OID
     - `"Car_"`
     - `"Airplane_"`
 
-3. The current structure of OID is as follows:
+ ### The current structure of OID is as follows:
 
 <!DOCTYPE html>
 <html lang="en">
@@ -300,7 +306,7 @@ OID
 
 1. Within the OID folder, in each class, right-click and select "Sort by Type." Then, take approximately 30% of the most recent `.txt` and `.jpg` files and move them to the `val` folder as shown below. The remaining ~70% of files should be placed in the `train` folder.
 
-2. The number of selected files can be monitored in the bottom left corner of the "File Explorer."
+2. The number of selected files can be viewed in the bottom left corner of the `File Explorer` window in Windows.
 
 3. It is crucial that each `.jpg` file has its corresponding `.txt` file in the appropriate folder (either `train` or `val`). Refer to the image below for clarification.
 

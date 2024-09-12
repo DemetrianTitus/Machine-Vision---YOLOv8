@@ -1,7 +1,7 @@
-# Object Detection in Clutter - Machine Vision
+# Object Detection in Cluttered Environments - Machine Vision
 
 ## Overview
-This project is about ***object detection in clutter*** using *YOLOv8* to identify and classify objects in still pictures and video streams. It can be used for surveillance, traffic monitoring, or any application that requires object detection.
+This project provides a comprehensive guide on ***object detection in cluttered environments*** using *YOLOv8*. It demonstrates how to identify and classify objects in both still images and video streams. The techniques outlined can be applied to various fields, including surveillance, traffic monitoring, and other applications requiring object detection.
 
 ### Purpose
 This project primarily demonstrates the capabilities of object detection in cluttered environments using YOLOv8. It serves as a comprehensive guide to correctly setting up data, training the model, and testing on images and videos. The aim is to provide a clear and practical guide for implementing object detection in various real-world scenarios.
@@ -30,7 +30,7 @@ Ensure you have the following installed:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/DemetrianTitus/Machine-Vision-YOLOv8.git
+   git clone https://github.com/DemetrianTitus/Machine-Vision---YOLOv8.git
 2. **Navigate to the Project Directory and Create a Virtual Environment (Optional but recommended):**
    ```bash
    cd "Machine Vision - YOLOv8"
@@ -69,7 +69,7 @@ If you need to resume training after stopping, use the `Continue_model_training.
 
 ### Model Testing
 
-1. **Image Testing:** To test the model on images, use the `Image_test_using_SAHI.py` script. For more information on the SAHI algorithm, refer to the [SAHI GitHub repository](https://github.com/obss/sahi.git).
+1. **Image Testing:** To test the model on images, use the `Image_test.py` or `Image_test_using_SAHI.py` script. For more information on the SAHI algorithm, refer to the [SAHI GitHub repository](https://github.com/obss/sahi.git).
 
 2. **Video Testing:** To test the model on videos, use the `Video_test.py` script.
 

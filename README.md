@@ -137,17 +137,17 @@ After a detailed guide on collecting data, training a model, and testing it, a s
 
 ### Indoor Environment Model Testing
 
-The `YOLOv8s model` was trained on `640x640` image sizes with approximately `500 epochs`. The initial results showed only 3 out of 9 objects detected.
+The `YOLOv8s model` was trained on `640x640` image sizes with approximately `500 epochs`. The initial results showed only ***3 out of 9 objects*** detected.
 
 To enhance detection, `SAHI algorithm` was applied, and a `clustering algorithm (DBSCAN)` was used to merge overlapping bounding boxes. This approach significantly improved detection quality.
 
 ![alt text](<Indoor enviroment/Example pictures/test_before_after.gif>)
 
-With the SAHI framework applied, 8 out of 9 objects were detected, with minimal accuracy of 70% for the Mug and 71% for the Teddy bear. Accuracy for other objects improved to 80% or above. Additional training with more complex models, larger image sizes, and more training images could further improve accuracy. Another example where the middle object was not detected is shown below.
+With the `SAHI` framework applied, ***8 out of 9 objects*** were detected, with minimal accuracy of 70% for the Mug and 71% for the Teddy bear. Accuracy for other objects improved to 80% or above. Additional training with more complex models, larger image sizes, and more training images could further improve accuracy. Another example where the middle object was not detected is shown below.
 
 ![Indoor Environment Example 3](<Indoor enviroment/Example pictures/test7.jpg>)
 
-Note that not all examples are "perfect". For instance, in the image below, the model failed to detect a book in the far-right corner but incorrectly identified a pillow as a book.
+Note that not all examples are "*perfect*". For instance, in the image below, the model failed to detect a book in the far-right corner but incorrectly identified a pillow as a book.
 
 ![Indoor Environment Example 4](<Indoor enviroment/Example pictures/test6.jpg>)
 
@@ -177,7 +177,7 @@ Note that not all examples are "perfect". For instance, in the image below, the 
 
 Testing the model in an urban environment presented several challenges due to the complexity of the scene. The performance of the model was influenced significantly by the image resolution and the configuration of the YOLOv8 model used for training.
 
-In the first example, the model successfully detects cars, traffic lights, traffic signs, and people. However, due to the use of `640x640` image size and the lightweight `YOLOv8n` model, the detection probabilities are not optimal, and the model struggles to maintain consistent tracking of objects. This suggests that there is room for improvement through the use of more robust models, higher-resolution images, and an increased volume of training data that is meticulously curated.
+In the first example, the model successfully detects cars, traffic lights, traffic signs, and people. However, due to the use of `640x640` image size and the lightweight `YOLOv8n model`, the detection probabilities are not optimal, and the model struggles to maintain consistent tracking of objects. This suggests that there is room for improvement through the use of more robust models, higher-resolution images, and an increased volume of training data that is meticulously curated.
 
 <div align="center">
     <img src="Urban enviroment/Model_training_results/GIF_1.gif" alt="Urban Environment Detection - Example 1">

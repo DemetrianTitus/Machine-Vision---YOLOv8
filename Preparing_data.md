@@ -135,12 +135,26 @@ OID
 
 ### Example of .txt file contents
 
-```markdown
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="box-container">
+        <div class="box">
+            <pre>
 | Object    | X      | Y          | Width | Height             |
 |-----------|--------|------------|-------|--------------------|
 | Car       | 522.24 | 185.692829 | 601.6 | 253.56632700000003 |
 | Airplane  | 100.24 | 50.692829  | 200.6 | 150.56632700000003 |
-```
+            </pre>
+        </div>
+    </div>
+</body>
+</html>
+
 
 ## Step 6: (Optional) Safety Measure
 
@@ -196,12 +210,26 @@ OID
 </html>
 
 ### Example of .txt file contents
-```markdown
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="box-container">
+        <div class="box">
+            <pre>
 | ID  | X      | Y          | Width | Height              |
 |-----|--------|------------|-------|---------------------|
 | 0   | 522.24 | 185.692829 | 601.6 | 253.56632700000003  |
 | 1   | 100.24 | 50.692829  | 200.6 | 150.56632700000003  |
-```
+            </pre>
+        </div>
+    </div>
+</body>
+</html>
+
 
 - Verify for each class whether the "converted .txt files" start with numbers instead of class names.
 

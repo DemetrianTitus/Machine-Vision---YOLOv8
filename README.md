@@ -1,30 +1,34 @@
 # Object Detection in Cluttered Environments - Machine Vision
 
 ## Overview
-This project provides a comprehensive guide on ***object detection in cluttered environments*** using *YOLOv8*. It demonstrates how to identify and classify objects in both still images and video streams. The techniques outlined can be applied to various fields, including surveillance, traffic monitoring, and other applications requiring object detection.
+This project provides a `comprehensive guide` on `object detection in cluttered environments` using `YOLOv8`. It demonstrates how to identify and classify objects in both still images and video streams. The techniques outlined can be applied to various fields, including surveillance, traffic monitoring, and other applications requiring object detection.
+
+---
 
 ### Purpose
-This project primarily demonstrates the capabilities of object detection in cluttered environments using YOLOv8. It serves as a comprehensive guide to correctly setting up data, training the model, and testing on images and videos. The aim is to provide a clear and practical guide for implementing object detection in various real-world scenarios.
+This project primarily ***demonstrates the capabilities of object detection in cluttered environments using YOLOv8***. It serves as a comprehensive guide to `correctly setting up data`, `training the model`, and `testing on images and videos`. The aim is to provide a clear and practical guide for implementing object detection in various real-world scenarios.
 
 
 ## Features
-- **Real-Time Object Detection:** Detection and classification of objects in scenes with high accuracy using YOLOv8.
+- **`Real-Time Object Detection:`** Detection and classification of objects in scenes with high accuracy using YOLOv8.
 
-- **Multi-Class Support:** Identifies a variety of objects, including cars, trucks, people, and more, based on your custom classes. 
+- **`Multi-Class Support:`** Identifies a variety of objects, including cars, trucks, people, and more, based on your custom classes. 
 
-- **Bounding Box Visualization:** Draws bounding boxes around detected objects with labels and confidence scores.
+- **`Bounding Box Visualization:`** Draws bounding boxes around detected objects with labels and confidence scores.
 
-- **Configurable Detection Threshold:** Allows you to set a confidence threshold to filter out less certain detections.
+- **`Configurable Detection Threshold:`** Allows you to set a confidence threshold to filter out less certain detections.
 
-- **GPU Acceleration:** Utilizes NVIDIA GPU acceleration for faster inference and processing times (if available).
+- **`GPU Acceleration:`** Utilizes NVIDIA GPU acceleration for faster inference and processing times (if available).
 
-- **Patch Analysis:** Provides detailed patch analysis for images using SAHI, improving detection quality on large-scale and complex scenes.
+- **`Patch Analysis:`** Provides detailed patch analysis for images using SAHI, improving detection quality on large-scale and complex scenes.
 
 ## Instalation
 
 ### Prerequisites
 Ensure you have the following installed:
 - **Python 3.9.13**: [Download Python](https://www.python.org/downloads/)
+
+---
 
 ### Installation Steps
 1. **Clone the Repository:**
@@ -51,21 +55,25 @@ This project consists of two primary components:
 1. **Model Training**
 2. **Model Testing**
 
+---
+
 ### Model Training
 
 To train a model, follow these steps:
 
-1. **Data Preparation:** Gather and organize the necessary data as outlined in [Preparing_data.md](Preparing_data.md). Ensure that the data is sorted in the specified order and configure the `config.yaml` file with the desired classes.
+1. **`Data Preparation:`** Gather and organize the necessary data as outlined in [Preparing_data.md](Preparing_data.md). Ensure that the data is sorted in the specified order and configure the `config.yaml` file with the desired classes.
 
     ***Note:*** Ensure to include the correct directory path in the configuration.
 
-2. **Training the Model:** Use the `Model_training.py` script to train your model.
+2. **`Training the Model:`** Use the `Model_training.py` script to train your model.
 
 For additional details on object detection and YOLOv8 models, please refer to the [Ultralytics GitHub repository](https://github.com/ultralytics/ultralytics.git).
 
 If you need to resume training after stopping, use the `Continue_model_training.py` script, which supports checkpoints. Point to your model's checkpoint file, such as `runs/detect/train/weights/last.pt`, to continue training.
 
 ***Note:*** The `NVIDIA_GPU_monitoring.py` script is used to monitor your NVIDIA GPU in a separate terminal. The terminal content is refreshed every 10 seconds to avoid clutter and provide up-to-date GPU monitoring data.
+
+---
 
 ### Model Testing
 
@@ -77,13 +85,17 @@ If you need to resume training after stopping, use the `Continue_model_training.
 
 Proper configuration is crucial for successful model training and testing. Ensure that the following files and settings are correctly configured:
 
-### 1. `config.yaml`
+---
+
+### 1. config.yaml
 
 The `config.yaml` file contains important parameters for training your model. Verify and adjust the following settings as needed:
 
 - **Classes:** List all the classes that the model should detect. Ensure that this list matches the classes in your dataset.
 - **Paths:** Set the correct paths for training and validation data directories.
 - **Hyperparameters:** Configure hyperparameters such as learning rate, batch size, and number of epochs according to your requirements. These settings apply to both the `Model_training.py` and `Continue_model_training.py` scripts.
+
+---
 
 ### 2. Directory Structure
 
@@ -96,12 +108,16 @@ Ensure that the directory structure of your dataset follows the expected format:
   - `Dataset/val/images/` (contains image files)
   - `Dataset/val/labels/` (contains corresponding label files)
 
+---
+
 ### 3. File Paths
 
 Make sure all file paths specified in your scripts are correct. This includes paths to:
 - Training and validation images and labels.
 - Checkpoints for resuming training.
 - Monitoring scripts, if applicable.
+
+---
 
 ### 4. Additional Settings
 
@@ -110,11 +126,13 @@ Depending on your setup and requirements, additional configuration settings may 
 - **Logging:** Configure logging options to monitor training progress and performance metrics.
 - **Data Augmentation:** If applicable, adjust data augmentation parameters in your configuration files.
 
+---
+
 For further assistance and details, refer to the [Ultralytics GitHub repository](https://github.com/ultralytics/ultralytics.git) and the [Preparing_data.md](Preparing_data.md) for guidance on data preparation.
 
 # Model Training and Testing
 
-After a detailed guide on collecting data, training a model, and testing it, a short presentation of models trained for two distinct environments: `indoor` and `urban` is provided.
+After a detailed guide on collecting data, training a model, and testing it, a ***short presentation*** of models trained for two distinct environments: `indoor` and `urban` is provided.
 
 ## Indoor Environment
 
@@ -134,6 +152,8 @@ After a detailed guide on collecting data, training a model, and testing it, a s
 | **Total**       | **12,969**           | **5,557**              |
 
 </div>
+
+---
 
 ### Indoor Environment Model Testing
 
@@ -172,6 +192,8 @@ Note that not all examples are "*perfect*". For instance, in the image below, th
 | **Total**       | **132,400**          | **31,529**             |
 
 </div>
+
+---
 
 ### Urban Environment Model Testing
 

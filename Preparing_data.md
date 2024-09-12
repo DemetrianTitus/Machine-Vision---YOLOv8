@@ -8,7 +8,7 @@ Ensure you have the following installed:
 
 ## Step 2: Download and Set Up `OIDv4_ToolKit`
 
-This project uses the `OIDv4_ToolKit` to download and visualize single or multiple classes from the Open Images v4 dataset. You can find more details about the toolkit and its usage in its [GitHub repository](https://github.com/EscVM/OIDv4_ToolKit).
+This project uses the `OIDv4_ToolKit` to download and visualize single or multiple classes from the `Open Images v4 dataset`. You can find more details about the toolkit and its usage in its [GitHub repository](https://github.com/EscVM/OIDv4_ToolKit).
 
 ---
 After downloading the `OIDv4_ToolKit`, navigate to the directory on your PC. For example:
@@ -29,6 +29,8 @@ Let's assume you want to download three specific classes:
 1. Car
 2. Airplane
 3. Traffic light
+
+---
 
 To download these classes, run the following command inside the terminal:
 
